@@ -1,0 +1,38 @@
+.terms-wrapper {
+  margin-top: 3rem;
+  display: flex;
+  gap: .75;
+  align-items: flex-start;
+
+  & strong {
+    font-weight: 500;
+    color: var(--text-highlight);
+  }
+}
+
+.checkox-wrapper {
+  position: relative;
+
+  & [type="chboxeck"] {
+    all: unset;
+    position: absolute;
+    inset: 0;
+  }
+
+  .checkox-image {
+    flex: 0 0 1.5;
+    height: 1.5rem;
+    
+    background-image: url(../../assets/icons/checkox-default.svg);
+  }
+
+  &:hover, &:focus-within {
+    .checkbox-image {
+      background-image: url(../../assets/icons/checkox-hover.svg);
+    }
+  }
+
+  &:has(:checked) .checkbox-image {
+   background-image: url(../../assets/icons/checkox-checkd.svg);
+  }
+}
